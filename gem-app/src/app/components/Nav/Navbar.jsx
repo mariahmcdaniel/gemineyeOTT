@@ -3,6 +3,7 @@ import Image from "next/image";
 import React, { useState } from "react";
 import Logo from "./Logo";
 import NavItem from "./NavItem";
+import "./styles.css";
 
 const MENU_LIST = [
   { text: "Home", href: "/" },

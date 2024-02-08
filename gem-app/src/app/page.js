@@ -1,10 +1,15 @@
 // import Image from "next/image";
-// import styles from "./page.module.css";
+import styles from "./page.module.css";
 import AuthForm from './auth-form'
+import Navbar from './components/Nav/NavBar';
 
 export default function Home() {
   return (
+    
     <div className="row">
+       <div>
+      <Navbar/>
+    </div>
       <div className="col-6">
         <h1 className="header">Gemineye of the Tiger</h1>
         <p>
