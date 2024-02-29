@@ -1,9 +1,10 @@
+"use client";
+
 import Link from "next/link";
 import Image from "next/image";
 import React, { useState } from "react";
-import Logo from "./Logo";
 import NavItem from "./NavItem";
-import "./styles.css";
+import "./style.css";
 
 const MENU_LIST = [
   { text: "Home", href: "/" },
@@ -19,9 +20,7 @@ const Navbar = () => {
     <header>
       <nav className={`nav`}>
         <Link href={"/"}>
-          <a>
-            <h1 className="logo">CodeWithMarish</h1>
-          </a>
+        <img src="/images/logo.jpg" alt="Gemineye of the Tiger Logo" />
         </Link>
         <div
           onClick={() => setNavActive(!navActive)}

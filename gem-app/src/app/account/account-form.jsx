@@ -1,11 +1,13 @@
 'use client'
 import { useCallback, useEffect, useState } from 'react'
 import { createClientComponentClient } from '@supabase/auth-helpers-nextjs'
+import Avatar from './avatar'
 
 export default function AccountForm({ user }) {
   const supabase = createClientComponentClient()
   const [loading, setLoading] = useState(true)
-  const [fullname, setFullname] = useState(null)
+  const [firstname, setFirstname] = useState(null)
+  const [lastname, setLastname] = useState(null)
   const [username, setUsername] = useState(null)
   const [zipcode, setZipcode] = useState(null)
   const [avatar_url, setAvatarUrl] = useState(null)
@@ -16,7 +18,7 @@ export default function AccountForm({ user }) {
 
       const { data, error, status } = await supabase
         .from('profiles')
-        .select(`full_name, username, zipcode, avatar_url`)
+        .select(`first_name, last_name, username, zipcode, avatar_url`)
         .eq('id', user?.id)
         .single()
 
@@ -25,7 +27,8 @@ export default function AccountForm({ user }) {
       }
 
       if (data) {
-        setFullname(data.full_name)
+        setFirstname(data.first_name)
+        setLastname(data.last_name)
         setUsername(data.username)
         setZipcode(data.zipcode)
         setAvatarUrl(data.avatar_url)
@@ -47,7 +50,8 @@ export default function AccountForm({ user }) {
 
       const { error } = await supabase.from('profiles').upsert({
         id: user?.id,
-        full_name: fullname,
+        first_name: firstname,
+        last_name: lastname,
         username,
         zipcode,
         avatar_url,
@@ -64,17 +68,35 @@ export default function AccountForm({ user }) {
 
   return (
     <div className="form-widget">
+        <Avatar
+        uid={user.id}
+        url={avatar_url}
+        size={150}
+        onUpload={(url) => {
+          setAvatarUrl(url)
+          updateProfile({ firstname, lastname, username, zipcode, avatar_url: url })
+        }}
+        />
       <div>
         <label htmlFor="email">Email</label>
         <input id="email" type="text" value={user?.email} disabled />
       </div>
       <div>
-        <label htmlFor="fullName">Full Name</label>
+        <label htmlFor="firstName">First Name</label>
         <input
-          id="fullName"
+          id="firstName"
           type="text"
-          value={fullname || ''}
-          onChange={(e) => setFullname(e.target.value)}
+          value={firstname || ''}
+          onChange={(e) => setFirstname(e.target.value)}
+        />
+      </div>
+      <div>
+        <label htmlFor="lastName">Last Name</label>
+        <input
+          id="lastName"
+          type="text"
+          value={lastname || ''}
+          onChange={(e) => setLastname(e.target.value)}
         />
       </div>
       <div>
@@ -96,10 +118,11 @@ export default function AccountForm({ user }) {
         />
       </div>
 
+
       <div>
         <button
           className="button primary block"
-          onClick={() => updateProfile({ fullname, username, zipcode, avatar_url })}
+          onClick={() => updateProfile({ firstname, lastname, username, zipcode, avatar_url })}
           disabled={loading}
         >
           {loading ? 'Loading ...' : 'Update'}
