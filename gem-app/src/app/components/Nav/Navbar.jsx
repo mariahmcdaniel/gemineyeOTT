@@ -16,11 +16,10 @@ const Navbar = () => {
   const [activeIdx, setActiveIdx] = useState(-1);
 
   return (
-    <header>
       <nav className={`nav`}>
-        <Link href={"/"}>
+        {/* <Link href={"/"}>
         <img className="navLogo" src="images/logo300.png" alt="Gemineye of the Tiger Logo" />
-        </Link>
+        </Link> */}
         <div
           onClick={() => setNavActive(!navActive)}
           className={`nav__menu-bar`}
@@ -29,9 +28,9 @@ const Navbar = () => {
           <div></div>
           <div></div>
         </div>
-        <div className={`${navActive ? "active" : ""} nav__menu-list`}>
+        <ul className={`${navActive ? "active" : ""} nav__menu-list`}>
           {MENU_LIST.map((menu, idx) => (
-            <div
+            <li
               onClick={() => {
                 setActiveIdx(idx);
                 setNavActive(false);
@@ -39,11 +38,10 @@ const Navbar = () => {
               key={menu.text}
             >
               <NavItem active={activeIdx === idx} {...menu} />
-            </div>
+            </li>
           ))}
-        </div>
+        </ul>
       </nav>
-    </header>
   );
 };
 

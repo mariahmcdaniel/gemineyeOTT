@@ -1,6 +1,7 @@
 .homeContainer {
   display: flex;
-  background-color: rgb(247, 243, 254);
+  background-color: #FCFFF7;
+  padding: 50px 0px;
 }
 
 /* .mainImage {

@@ -21,18 +21,18 @@ export default function Home() {
   // }, []);  
   
   return (
-    <div className="homeContainer row">
-      <div className="linksContainer col-4">
+    <div className="homeContainer row d-flex align-items-center">
+      <div className="linksContainer col-4 d-flex justify-content-center">
       <Link href="/">
             
             <img className="btnImg" src="images/pink-flower.png" alt="image link" />
          
         </Link>
       </div>
-       <div className="mainImage col-4">
+       <div className="mainImage col-4 d-flex justify-content-center">
         <img className="btnImg" src="images/2024LOGO800px.png" alt="Main Image" />
       </div> 
-      <div className="linksContainer col-4">
+      <div className="linksContainer col-4 d-flex justify-content-center">
       <Link href="/">
             
             <img className="btnImg" src="images/pink-flower.png" alt="image link" />
