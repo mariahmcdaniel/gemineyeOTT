@@ -1,14 +1,13 @@
 "use client";
 
 import Link from "next/link";
-import Image from "next/image";
 import React, { useState } from "react";
 import NavItem from "./NavItem";
 import "./style.css";
 
 const MENU_LIST = [
+  { text: "Login", href: "/login" },
   { text: "Home", href: "/" },
-  { text: "About", href: "/about" },
   { text: "Shop", href: "/shop"},
   { text: "Contact", href: "/contact" },
 ];
@@ -20,7 +19,7 @@ const Navbar = () => {
     <header>
       <nav className={`nav`}>
         <Link href={"/"}>
-        <img src="/images/logo.jpg" alt="Gemineye of the Tiger Logo" />
+        <img className="navLogo" src="images/logo300.png" alt="Gemineye of the Tiger Logo" />
         </Link>
         <div
           onClick={() => setNavActive(!navActive)}

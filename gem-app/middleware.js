@@ -18,7 +18,7 @@ export async function middleware(req) {
   if (!user && req.nextUrl.pathname !== '/') {
     return NextResponse.redirect(new URL('/', req.url))
   }
-
+  
   return res
 }
 

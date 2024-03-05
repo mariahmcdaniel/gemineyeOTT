@@ -1,10 +1,10 @@
-* {
+/* * {
   margin: 0;
   padding: 0;
   outline: none;
   box-sizing: border-box;
   font-family: 'Work Sans', sans-serif;
-}
+} */
 a{
   text-decoration: none;
   color: inherit;
@@ -19,7 +19,7 @@ nav{
   padding: 16px;
   justify-content: space-between;
   align-items: center;
-  background-color: #f1f1f1;
+  background-color: #fafff1;
 }
 .nav__menu-bar{
   display: flex;
@@ -41,7 +41,7 @@ nav{
   width: 288px;
   row-gap: 24px;
   right: -288px;
-  padding: 24px 16px;
+  padding: 10px;
   transition: all 0.2s;
   min-height: calc(100vh - 60px);
   background-color: #f1f1f1;
@@ -57,6 +57,10 @@ nav{
 
 .nav__link:hover{
  font-weight: bold;
+}
+
+.navLogo{
+  max-width: 30%;
 }
 
 .center{
