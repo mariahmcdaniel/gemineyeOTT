@@ -3,8 +3,8 @@ import Link from "next/link";
 export default function Casting() {
     return (
       <main>
-        <div className="text-center mt-4 col-md-6 mx-auto"> 
-          <h1>Custom Resin Casting</h1>
+        <div className="castingCont text-center mt-4 col-md-6 mx-auto"> 
+          <h1 id="castingH1">Custom Resin Casting</h1>
           
           <div className="accordion" id="accordionExample">
             <div className="accordion-item">
