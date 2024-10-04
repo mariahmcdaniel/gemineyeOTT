@@ -111,6 +111,10 @@ h2{
   color: #83c039;
 }
 
+input{
+  min-width: 22vw ;
+}
+
 .form-container{
   display: flex;
   flex-direction: column;

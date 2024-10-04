@@ -94,11 +94,7 @@ function ContactForm() {
                                 {({ field, meta }) => (
                                     <div className="form-control">
                                         <label mb="1.5" fontSize="sm" htmlFor="contact-email">
-                                            Email address{" "}
-                                            <span className="help-text">
-                                                (A test email notification will be sent to this
-                                                email)
-                                            </span>
+                                            Email address
                                         </label>
                                         <input
                                             {...field}

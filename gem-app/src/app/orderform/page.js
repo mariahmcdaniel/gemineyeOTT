@@ -103,11 +103,7 @@ function ProjectsInq() {
                                 {({ field, meta }) => (
                                     <div className="form-control">
                                         <label mb="1.5" fontSize="sm" htmlFor="projectinq-email">
-                                            Email address{" "}
-                                            <span className="help-text">
-                                                (A test email notification will be sent to this
-                                                email)
-                                            </span>
+                                            Email address
                                         </label>
                                         <input
                                             {...field}
@@ -146,11 +142,11 @@ function ProjectsInq() {
                                 {({ field, meta }) => (
                                     <div className="form-control">
                                         <label mb="1.5" fontSize="sm" htmlFor="projectinq-event_date">
-                                            Date of the event - for example, the wedding date. - or the earliest date you are able to ship your flowers
+                                            Date of the event - or the earliest date you are able to ship your flowers
                                         </label>
                                         <input
                                             {...field}
-                                            placeholder="When will your flowers be sent to me?"
+                                            placeholder="When would your flowers be sent to me?"
                                             id="projectinq-name"
                                             onChange={(e) => {
                                                 const value = cleanInput(e.target.value);
@@ -188,7 +184,7 @@ function ProjectsInq() {
                                         </label>
                                         <input
                                             {...field}
-                                            placeholder="Enter the dimensions of the casting(s) you are interested in"
+                                            placeholder="Example: 4x6, 5x7, 8x10"
                                             onChange={(e) => {
                                                 const value = cleanInput(e.target.value);
                                                 setFieldValue("size", value);
@@ -207,7 +203,7 @@ function ProjectsInq() {
                                         <textarea
                                             {...field}
                                             id="projectinq-details"
-                                            placeholder="Describe what you are reaching out for."
+                                            placeholder="Please include any additional details."
                                             onChange={(e) => {
                                                 const value = cleanInput(e.target.value);
                                                 setFieldValue("details", value);

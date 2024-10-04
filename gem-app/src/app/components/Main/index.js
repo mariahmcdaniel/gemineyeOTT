@@ -23,7 +23,7 @@ export default function Home() {
   return (
     <div className="homeContainer row d-flex align-items-center">
       <div className="linksContainer col-4 d-flex justify-content-center">
-      <Link href="/">
+      <Link href="/casting">
             <img className="btnImg" src="images/mine300px.png" alt="image link" />
             <h3>Resin Casting</h3>
         </Link>
@@ -32,10 +32,10 @@ export default function Home() {
         <img className="btnImg" src="images/2024LOGO800px.png" alt="Main Image" />
       </div> 
       <div className="linksContainer col-4 d-flex justify-content-center">
-      <Link href="/">
+      <Link href="/shop">
             
-            <img className="btnImg" src="images/pink-flower.png" alt="image link" />
-         
+            <img className="btnImg" src="images/tomatoears.png" alt="image link" />
+            <h3>Shop Products</h3>
         </Link>
       </div>
       {/* <div className="imgContainer">
