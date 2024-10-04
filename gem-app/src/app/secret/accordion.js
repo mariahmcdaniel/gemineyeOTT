@@ -1,45 +1,43 @@
-import Link from "next/link";
-
-export default function Casting() {
+export default function accordionEx() {
     return (
       <main>
         <div className="text-center mt-4 col-md-6 mx-auto"> 
-          <h1 className="text-danger">Custom Resin Casting</h1>
+          <h1 className="text-danger">Hello Bootstrap</h1>
           
           <div className="accordion" id="accordionExample">
             <div className="accordion-item">
               <h2 className="accordion-header" id="headingOne">
                 <button className="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-                  What is resin casting?
+                  Accordion Item #1
                 </button>
               </h2>
               <div id="collapseOne" className="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
                 <div className="accordion-body">
-                  <strong>Resin casting is a process in which objects, such as flowers, are encased in clear resin in order to preserve their appearance and details over time.</strong> For floral preservation, the bouquet is decontructed and carefully dried to maintain its beauty. Resin is then poured around the dried flowers in layers, creating a smooth, durable block that captures the sentimental value of the bouquet.
+                  <strong>This is the first accordion body.</strong> It is shown by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. Also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow.
                 </div>
               </div>
             </div>
             <div className="accordion-item">
               <h2 className="accordion-header" id="headingTwo">
                 <button className="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-                  How much does it cost?
+                  Accordion Item #2
                 </button>
               </h2>
               <div id="collapseTwo" className="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
                 <div className="accordion-body">
-                  <strong>The size of the cast and depth required to encase the flowers determine the final price.</strong> You can use my <u><Link href="/castingcalc">project calculator</Link></u> to get an idea of what it might cost. Please note that this is not a final quote, and prices may vary depending on the complexity of the project. An official quote will be provided after discussing your project in detail.
+                  <strong>This is the second accordion body.</strong> It is hidden by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. Also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow.
                 </div>
               </div>
             </div>
             <div className="accordion-item">
               <h2 className="accordion-header" id="headingThree">
                 <button className="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-                  How do I order a custom casting?
+                  Accordion Item #3
                 </button>
               </h2>
               <div id="collapseThree" className="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionExample">
                 <div className="accordion-body">
-                  <strong>I would love to bring your project to life!</strong> To get the process started, please fill out my <u><Link href={"/orderform"}>project inquiry form</Link></u> or email me at mariah@gemineyeofthetiger.com with your project details. I will reach out to you to discuss the logistics and provide a quote. Once we have agreed on the details, I will send you an invoice for the project. After your deposit and flowers are received, I will begin the casting process.
+                  <strong>This is the third accordion body.</strong> It is hidden by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. Also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow.
                 </div>
               </div>
             </div>
