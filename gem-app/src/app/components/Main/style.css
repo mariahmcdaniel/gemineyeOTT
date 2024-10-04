@@ -1,9 +1,12 @@
 .homeContainer {
   display: flex;
+  align-items: center;
   background-color: #FCFFF7;
-  padding: 50px 0px;
+  min-height: 100vh;
 }
-
+.linksContainer{
+  text-align: center;
+}
 /* .mainImage {
   width: 300px;
   height: 300px;
@@ -19,12 +22,18 @@
 
 .imgContainer {
   display: flex;
+  justify-items: center;
   flex-direction: row;
   padding: 144px 40px;
 }
 
 .btnImg {
   max-width: 98%;
+}
+
+h3{
+  font-size: 1.5rem;
+  color: #5a7447;
 }
 /* 
 .smallImages {

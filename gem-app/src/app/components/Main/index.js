@@ -24,9 +24,8 @@ export default function Home() {
     <div className="homeContainer row d-flex align-items-center">
       <div className="linksContainer col-4 d-flex justify-content-center">
       <Link href="/">
-            
-            <img className="btnImg" src="images/pink-flower.png" alt="image link" />
-         
+            <img className="btnImg" src="images/mine300px.png" alt="image link" />
+            <h3>Resin Casting</h3>
         </Link>
       </div>
        <div className="mainImage col-4 d-flex justify-content-center">
