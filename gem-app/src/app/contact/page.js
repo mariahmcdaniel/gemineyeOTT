@@ -118,7 +118,7 @@ function ContactForm() {
                                 {({ field, meta }) => (
                                     <div className="form-control">
                                         <label mb="1.5" fontSize="sm" htmlFor="contact-body">
-                                            Body
+                                            Message
                                         </label>
                                         <textarea
                                             {...field}
